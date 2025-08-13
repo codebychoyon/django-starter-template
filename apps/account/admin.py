@@ -4,7 +4,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from .models import (
     User,
-    Profile
+    # Profile
 )
 
 # unregister groups
@@ -31,8 +31,8 @@ class UserAdmin(BaseUserAdmin):
     )
 
 
-@admin.register(Profile)
-class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'phone_number')
-    search_fields = ('user__email', 'user__first_name', 'user__last_name')
-    ordering = ('-user__date_joined',)
+# @admin.register(Profile)
+# class ProfileAdmin(admin.ModelAdmin):
+#     list_display = ('user', 'phone_number')
+#     search_fields = ('user__email', 'user__first_name', 'user__last_name')
+#     ordering = ('-user__date_joined',)
